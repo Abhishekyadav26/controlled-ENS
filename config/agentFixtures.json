@@ -1,0 +1,20 @@
+{
+  "contract.priyasstudio.eth": {
+    "description": "Answers questions about contracts: clauses, liability, termination, renewal, NDAs and indemnification. Send contract questions here.",
+    "endpoint": "http://localhost:3001/agents/contract/answer",
+    "input": { "type": "object", "properties": { "question": { "type": "string", "maxLength": 2000 } }, "required": ["question"] },
+    "version": "1"
+  },
+  "brand.priyasstudio.eth": {
+    "description": "Writes brand copy: taglines, slogans, tone of voice, product descriptions and marketing copy. Send brand and copywriting requests here.",
+    "endpoint": "http://localhost:3001/agents/brand/answer",
+    "input": { "type": "object", "properties": { "question": { "type": "string", "maxLength": 2000 } }, "required": ["question"] },
+    "version": "1"
+  },
+  "invoice.priyasstudio.eth": {
+    "description": "Sorts out invoices and billing: overdue invoices, payments, receipts, refunds and VAT. Send invoice and billing questions here.",
+    "endpoint": "http://localhost:3001/agents/invoice/answer",
+    "input": { "type": "object", "properties": { "question": { "type": "string", "maxLength": 2000 } }, "required": ["question"] },
+    "version": "1"
+  }
+}

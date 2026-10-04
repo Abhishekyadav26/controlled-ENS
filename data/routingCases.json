@@ -1,0 +1,14 @@
+[
+  { "id": "invoice-overdue", "question": "My invoice #1042 is two weeks overdue, when will I get paid?", "expected": "invoice.priyasstudio.eth" },
+  { "id": "invoice-vat", "question": "How do I add VAT to invoice #77 and send a receipt?", "expected": "invoice.priyasstudio.eth" },
+  { "id": "invoice-refund", "question": "Can you refund invoice #310 and confirm the payment status?", "expected": "invoice.priyasstudio.eth" },
+  { "id": "invoice-billing", "question": "What is the billing address on my last invoice?", "expected": "invoice.priyasstudio.eth" },
+  { "id": "contract-nda", "question": "What does the liability clause in our NDA mean for termination?", "expected": "contract.priyasstudio.eth" },
+  { "id": "contract-renewal", "question": "Can you explain the renewal and indemnification terms in this contract?", "expected": "contract.priyasstudio.eth" },
+  { "id": "contract-clause", "question": "Review this contract clause about liability on cancellation.", "expected": "contract.priyasstudio.eth" },
+  { "id": "brand-tagline", "question": "Write a playful tagline for our new soap brand.", "expected": "brand.priyasstudio.eth" },
+  { "id": "brand-tone", "question": "Give me three slogan options in a premium tone of voice.", "expected": "brand.priyasstudio.eth" },
+  { "id": "brand-copy", "question": "Draft marketing copy for our product launch landing page.", "expected": "brand.priyasstudio.eth" },
+  { "id": "none-weather", "question": "What is the weather on Mars tomorrow?", "expected": "none" },
+  { "id": "none-plumbing", "question": "How do I fix a leaking kitchen tap?", "expected": "none" }
+]

@@ -1,0 +1,6 @@
+{
+  "registry": "priyasstudio.eth",
+  "agents": ["contract.priyasstudio.eth", "brand.priyasstudio.eth", "invoice.priyasstudio.eth"],
+  "chain": "sepolia",
+  "note": "Router reads AGENT_ENS_NAMES env first; otherwise this list; plus the registry's ai.agent.registry text record on Sepolia. Adding a 4th agent = publish its records + append here or to the registry record. No code change."
+}
