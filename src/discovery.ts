@@ -78,7 +78,7 @@ async function getTextSafe(
   key: string,
 ): Promise<string | null> {
   try {
-    const v = await client.getEnsText({ name: name as `${string}.eth`, key });
+    const v = await client.getEnsText({ name, key });
     return v ?? null;
   } catch {
     return null;

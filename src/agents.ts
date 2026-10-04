@@ -94,8 +94,11 @@ export function createAgentsApp() {
 
   for (const def of AGENT_DEFS) {
     // Public self-description — mirrors exactly what is published in ENS text records.
-    app.get(`/agents/${def.id}/describe`, (_req, res) => {
-      const base = process.env.PUBLIC_AGENT_BASE_URL ?? `http://localhost:${process.env.AGENTS_PORT ?? "3001"}`;
+    // The endpoint is derived from the incoming request host, never from a
+    // hardcoded map or environment variable, so the advertisement always
+    // matches where this agent is actually reachable.
+    app.get(`/agents/${def.id}/describe`, (req, res) => {
+      const base = `${req.protocol}://${req.get("host")}`;
       res.json({
         ensName: def.ensName,
         records: buildTextRecords({ description: def.description, endpoint: `${base}/agents/${def.id}/answer` }),
