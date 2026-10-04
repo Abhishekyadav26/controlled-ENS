@@ -20,7 +20,10 @@ async function main() {
   const key = process.env.DEPLOYER_PRIVATE_KEY as Hex | undefined;
   if (!key) throw new Error("Set DEPLOYER_PRIVATE_KEY (0x...) to publish ENS records.");
   const rpc = process.env.SEPOLIA_RPC_URL ?? "https://ethereum-sepolia-rpc.publicnode.com";
-  const base = process.env.PUBLIC_AGENT_BASE_URL ?? "http://localhost:3001";
+  // No localhost fallback here on purpose: the published endpoint is what the
+  // router will call in production, so it must be an explicit, public URL.
+  const base = process.env.PUBLIC_AGENT_BASE_URL;
+  if (!base) throw new Error("Set PUBLIC_AGENT_BASE_URL to the agents' public base URL (e.g. https://agents.example.com).");
   const names = JSON.parse(readFileSync(resolve(process.cwd(), "config/ens.names.json"), "utf8")) as {
     registry: string;
     agents: string[];
